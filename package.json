@@ -1,0 +1,37 @@
+{
+	"name": "vbb-station-graph",
+	"description": "Visualize VBB public transport next to any station.",
+	"version": "0.1.0",
+	"keywords": [
+		"vbb",
+		"neighborhood",
+		"graph"
+		"visualize",
+		"berlin",
+		"brandenburg",
+		"public transport",
+		"vbb",
+		"open data",
+		"coffeescript",
+		"javascript"
+	],
+	"author": {
+		"name": "Jannis R",
+		"email": "mail@jannisr.de",
+		"url": "http://jannisr.de"
+	},
+	"homepage": "https://github.com/derhuerst/vbb-station-graph",
+	"repository": "git://github.com/derhuerst/vbb-station-graph.git",
+	"bugs": "https://github.com/derhuerst/vbb-station-graph/issues",
+	"license": "MIT",
+	"dependencies": {
+		"coffee-script":				"^1.9.3",
+		"commander":					"^2.8.1",
+		"inquirer":						"ssh://git@github.com:derhuerst/Inquirer.js.git#autocomplete",
+		"vbb-stations-autocomplete":	"^0.4.2",
+		"vbb-static":					"^0.8.0",
+		"cli-width":					"^1.0.1",
+		"wgs84-util":					"^2.0.1",
+		"q":							"^1.4.1"
+	}
+}
