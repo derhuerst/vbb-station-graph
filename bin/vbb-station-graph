@@ -1,0 +1,39 @@
+#!/usr/bin/env coffee
+
+program =		require 'commander'
+
+
+
+
+
+pkg =			require '../package.json'
+
+program
+.version pkg.version
+.option '-s, --station [id]', 'The id of the station at the center.', parseInt
+.option '-r, --radius [m]', 'Radius in meters. Default: 1000', parseInt
+.option '-f, --file [path]', 'The name of the output PNG file. Default: `vbb-<id>.png`'
+.option '-o, --open', 'Wether to open the output PNG file. Default: false'
+.option '-p, --resolution [px]', 'Resolution of the output PNG. Default: --radius', parseInt
+.parse process.argv
+
+program.radius ?= 1000
+program.resolution ?= program.radius
+
+
+
+
+
+search = require '../lib/01-search'
+station = require '../lib/02-station'
+location = require '../lib/03-location'
+graph = require '../lib/04-graph'
+render = require '../lib/05-render'
+save = require '../lib/06-save'
+
+search program
+.then station
+.then location
+.then graph
+.then render
+.then save
