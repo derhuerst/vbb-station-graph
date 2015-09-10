@@ -26,14 +26,14 @@ program.resolution ?= program.radius
 
 search = require '../lib/01-search'
 station = require '../lib/02-station'
-location = require '../lib/03-location'
 graph = require '../lib/04-graph'
 render = require '../lib/05-render'
 save = require '../lib/06-save'
+boundingBox =	require '../lib/04-bounding-box'
 
 search program
 .then station
-.then location
 .then graph
+.then boundingBox
 .then render
 .then save
