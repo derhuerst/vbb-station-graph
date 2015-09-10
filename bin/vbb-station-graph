@@ -24,12 +24,12 @@ program.resolution ?= program.radius
 
 
 
-search = require '../lib/01-search'
-station = require '../lib/02-station'
-render = require '../lib/05-render'
-save = require '../lib/06-save'
+search =		require '../lib/01-search'
+station =		require '../lib/02-station'
 adjacent =		require '../lib/03-adjacent'
 boundingBox =	require '../lib/04-bounding-box'
+render =		require '../lib/05-render'
+save =			require '../lib/06-save'
 
 search program
 .then station
