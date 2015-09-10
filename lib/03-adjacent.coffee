@@ -25,7 +25,7 @@ module.exports = (program) ->
 		deferred = Q.defer()
 		program.stations = stations
 		program.lines = lines
-		program.graph = {}
+		program.adjacent = {}
 
 		trips = vbbStatic.trips 'all'
 		trips.on 'end', () -> deferred.resolve program
@@ -36,7 +36,8 @@ module.exports = (program) ->
 				continue unless currentStation.s is program.station.id
 				nextStation = trip.stations[i + 1]
 				continue unless nextStation
-				program.graph[line.id] ?= {}
-				program.graph[line.id][nextStation.s] = stations[nextStation.s]
+				program.adjacent[line.id] ?= {}
+				nextStation = stations[nextStation.s]
+				program.adjacent[line.id][nextStation.id] = nextStation
 
 		return deferred.promise
