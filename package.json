@@ -33,6 +33,7 @@
 		"vbb-stations-autocomplete":	"^0.4.2",
 		"vbb-static":					"^0.8.0",
 		"wgs84-util":					"^2.0.1",
+		"vbb-util":						"^0.8.0",
 		"svg-builder":					"^0.0.4"
 	},
 	"directories": {
