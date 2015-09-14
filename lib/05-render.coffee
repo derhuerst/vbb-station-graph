@@ -5,6 +5,8 @@ util =			require 'vbb-util'
 
 
 
+# todo: use https://github.com/csbrandt/WGS84Util/issues/2#issuecomment-139317017
+
 module.exports = (program) ->
 	console.log 'Generating the SVG.'
 
