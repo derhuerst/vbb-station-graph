@@ -2,7 +2,10 @@
 	"name": "vbb-station-graph",
 	"description": "Visualize VBB public transport next to any station.",
 	"version": "0.1.0",
-	"bin": "./bin/vbb-station-graph",
+	"bin": {
+		"vbb-station-graph":	"./bin/vbb-station-graph"
+	},
+	"preferGlobal": true,
 	"keywords": [
 		"vbb",
 		"neighborhood",
@@ -34,7 +37,9 @@
 		"vbb-static":					"^0.8.0",
 		"wgs84-util":					"^2.0.1",
 		"vbb-util":						"^0.8.0",
-		"svg-builder":					"^0.0.4"
+		"hifo":							"^0.4.0",
+		"svg-builder":					"^0.0.4",
+		"vbb-util":						"^0.7.2"
 	},
 	"directories": {
 		"bin": "./bin",
