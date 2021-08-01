@@ -33,7 +33,7 @@
 		"commander":					"^2.8.1",
 		"q":							"^1.4.1",
 		"inquirer":						"ssh://git@github.com:derhuerst/Inquirer.js.git#autocomplete",
-		"vbb-stations-autocomplete":	"^0.4.2",
+		"vbb-stations-autocomplete":	"^0.10.0",
 		"vbb-static":					"^0.8.0",
 		"wgs84-util":					"^2.0.1",
 		"vbb-util":						"^0.8.0",
